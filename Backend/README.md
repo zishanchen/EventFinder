@@ -8,7 +8,7 @@ The application is intended to run with Docker Compose from a folder containing
 both repositories:
 
 ```text
-Team 2/
+EventFinder/
   Backend/
   Frontend/
   docker-compose.yml
