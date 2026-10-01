@@ -7,7 +7,7 @@ React and Vite frontend for EventFinder.
 The complete application is started from a folder that contains both repositories:
 
 ```text
-Team 2/
+EventFinder/
   Backend/
   Frontend/
   docker-compose.yml
