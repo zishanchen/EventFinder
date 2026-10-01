@@ -1,0 +1,271 @@
+@media (max-width: 560px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h1,
+  .hero h1,
+  .auth-page__title,
+  .dashboard__header h1,
+  .admin-header h1,
+  .create-event__header h1,
+  .boost-page__header h1,
+  .event-hero__title {
+    font-size: clamp(1.65rem, 8vw, 2rem);
+    line-height: 1.12;
+  }
+
+  h2,
+  .section-heading h2,
+  .dashboard-section h2,
+  .admin-section-heading h2,
+  .profile-section-title h2,
+  .profile-events__column h2,
+  .rate-header h2,
+  .event-detail .event-card__title {
+    font-size: clamp(1.15rem, 5.4vw, 1.35rem);
+    line-height: 1.2;
+  }
+
+  p,
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    min-height: 60px;
+  }
+
+  .navbar__logo-img {
+    height: 58px;
+    max-width: 78px;
+  }
+
+  .navbar__link,
+  .navbar__register,
+  .navbar__logout {
+    min-height: 34px;
+    padding: 0 9px;
+    font-size: 0.84rem;
+  }
+
+  .navbar__icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .navbar--authenticated {
+    min-height: 64px;
+  }
+
+  .navbar--authenticated .navbar__logo-img {
+    height: 62px;
+    max-width: 84px;
+  }
+
+  .navbar--authenticated .navbar__link,
+  .navbar--authenticated .navbar__logout {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.88rem;
+  }
+
+  .navbar--authenticated .navbar__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navbar--authenticated .navbar__account {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar--authenticated .navbar__avatar,
+  .navbar--authenticated .navbar__avatar-fallback {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+  }
+
+  .auth-card,
+  .dashboard-section,
+  .admin-section,
+  .profile-card,
+  .profile-events__column,
+  .create-event__card,
+  .rate-page__card,
+  .event-detail .event-card,
+  .boost-page__header,
+  .boost-page__container > section,
+  .boost-card {
+    border-radius: 14px;
+    padding: 16px 14px;
+  }
+
+  .dashboard-metric,
+  .admin-stat,
+  .profile-header__stat,
+  .event-card,
+  .dashboard-event,
+  .profile-event-card,
+  .rate-page__participant-row,
+  .admin-queue__item {
+    gap: 10px;
+    border-radius: 14px;
+    padding: 12px;
+  }
+
+  .hero,
+  .profile-page,
+  .dashboard,
+  .admin-body,
+  .create-event,
+  .event-detail,
+  .rate-content,
+  .boost-page__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero {
+    padding-top: 44px;
+    padding-bottom: 36px;
+  }
+
+  .hero__subtitle,
+  .auth-page__subtitle,
+  .dashboard__header p:not(.dashboard__eyebrow),
+  .admin-header__subtitle,
+  .create-event__header p,
+  .boost-page__header p,
+  .event-details-card__description {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .hero_search,
+  .hero__search {
+    margin-top: 24px;
+  }
+
+  .hero__chip,
+  .admin-tab,
+  .admin-role-tab,
+  .filter__preset,
+  .filter__event-type,
+  .create-event__tag {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 0.85rem;
+  }
+
+  .dashboard-metric strong,
+  .admin-stat__value,
+  .profile-header__stat strong,
+  .registration-card__price,
+  .boost-card__amount {
+    font-size: clamp(1.45rem, 6.8vw, 1.85rem);
+  }
+
+  .dashboard-metric__icon,
+  .admin-stat__icon,
+  .profile-header__stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .dashboard-metric__icon svg,
+  .admin-stat__icon svg,
+  .profile-header__stat-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .dashboard-event__image,
+  .profile-event-card__image,
+  .discover .event-card__image,
+  .rate-page__event-image {
+    height: 150px;
+  }
+
+  .create-event__upload,
+  .create-event__upload--filled,
+  .create-event__upload--filled img,
+  .create-event__map,
+  .location-card__map {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .admin-btn,
+  .dashboard__primary-action,
+  .dashboard__wide-action,
+  .create-event__secondary,
+  .create-event__primary,
+  .registration-card__primary-button,
+  .registration-card__secondary-button,
+  .rate-page__submit,
+  .rate-page__skip,
+  .boost-card__btn,
+  .profile-payment__manage-button {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 0.95rem;
+  }
+
+  .auth-field__input,
+  .create-event__field input,
+  .create-event__field textarea,
+  .admin-input,
+  .admin-search,
+  .filter__search {
+    min-height: 42px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .star-rating__star {
+    width: 34px;
+    height: 34px;
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar__link,
+  .navbar__register,
+  .navbar__logout {
+    padding: 0 5px;
+    font-size: 0.72rem;
+  }
+
+  .hero_categories,
+  .admin-tabs,
+  .dashboard__metrics,
+  .admin-stats,
+  .profile-header__stats,
+  .boost-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card,
+  .dashboard-section,
+  .admin-section,
+  .profile-card,
+  .profile-events__column,
+  .create-event__card,
+  .rate-page__card,
+  .event-detail .event-card {
+    padding: 14px 12px;
+  }
+}

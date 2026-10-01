@@ -1,0 +1,54 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: eventfinder-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - eventfinder-mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./Backend
+    container_name: eventfinder-backend
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://mongo:27017/EventFinder
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+
+  seed:
+    build:
+      context: ./Backend
+    container_name: eventfinder-seed
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://mongo:27017/EventFinder
+    command: ["npm", "run", "seed"]
+    restart: "no"
+
+  frontend:
+    build:
+      context: ./Frontend
+      args:
+        VITE_API_BASE_URL: /api
+    container_name: eventfinder-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+
+volumes:
+  eventfinder-mongo-data:
